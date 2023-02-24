@@ -1,0 +1,8 @@
+syntax = "proto3";
+
+message File {
+    required string user_id = 1;
+    required string name = 2;
+    required string file_format = 3;
+    required bytes file = 4;
+}
