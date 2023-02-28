@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import user_pb2 as user__pb2
+from . import user_pb2 as user__pb2
 
 
 class UserServiceStub(object):
@@ -24,10 +24,10 @@ class UserServiceStub(object):
                 request_serializer=user__pb2.ID.SerializeToString,
                 response_deserializer=user__pb2.User.FromString,
                 )
-        self.GetUserList = channel.unary_stream(
+        self.GetUserList = channel.unary_unary(
                 '/UserService/GetUserList',
                 request_serializer=user__pb2.NoMessage.SerializeToString,
-                response_deserializer=user__pb2.User.FromString,
+                response_deserializer=user__pb2.UserList.FromString,
                 )
         self.UpdateUser = channel.unary_unary(
                 '/UserService/UpdateUser',
@@ -87,10 +87,10 @@ def add_UserServiceServicer_to_server(servicer, server):
                     request_deserializer=user__pb2.ID.FromString,
                     response_serializer=user__pb2.User.SerializeToString,
             ),
-            'GetUserList': grpc.unary_stream_rpc_method_handler(
+            'GetUserList': grpc.unary_unary_rpc_method_handler(
                     servicer.GetUserList,
                     request_deserializer=user__pb2.NoMessage.FromString,
-                    response_serializer=user__pb2.User.SerializeToString,
+                    response_serializer=user__pb2.UserList.SerializeToString,
             ),
             'UpdateUser': grpc.unary_unary_rpc_method_handler(
                     servicer.UpdateUser,
@@ -157,9 +157,9 @@ class UserService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/UserService/GetUserList',
+        return grpc.experimental.unary_unary(request, target, '/UserService/GetUserList',
             user__pb2.NoMessage.SerializeToString,
-            user__pb2.User.FromString,
+            user__pb2.UserList.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
