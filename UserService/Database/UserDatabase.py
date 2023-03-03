@@ -1,19 +1,38 @@
 
 from GRPC.user_pb2 import User, UserList
 from Database.DatabaseInterface import UserDatabase
+import json
+from google.protobuf.json_format import MessageToDict
 
-class UserFileDatabase(UserDatabase):
+class UserDatabase(UserDatabase):
     def __init__(self):
         self.readFile()
 
     def readFile(self):
-        self.database = {1:User(id=1, name='Alejandro', age=20, password='password', email='email')}
-        self.id_count = 2
-        pass
+        with open('./Database/users.txt') as f:
+            self.database  = json.loads(f.read())
+        lastId = 1
+        for i in self.database.keys():
+            user = self.database[i]
+            lastId = user["id"]
+            self.database[i] = User(
+                id=user["id"], 
+                name=user["name"], 
+                age=user["age"], 
+                password=user["password"], 
+                email=user["email"]
+            )
+        self.id_count = lastId + 1
+
+    def writeFile(self):
+        with open('./Database/users.txt', 'wb') as convert_file:
+            convert_file.write(bytes(json.dumps(self.database, default=MessageToDict), 'utf-8'))
 
     def createUser(self, user) -> User:
+        
         user.id = self.id_count
         self.database[user.id] =  user
+        self.writeFile()
         self.id_count += 1
         return self.database[user.id]
 
@@ -30,6 +49,7 @@ class UserFileDatabase(UserDatabase):
         if not id in self.database:
             return User()
         self.database[id] = user
+        self.writeFile()
         return self.database[id]
 
 
@@ -38,4 +58,5 @@ class UserFileDatabase(UserDatabase):
             return User()
         user = self.database[id]
         del self.database[id]
+        self.writeFile()
         return user
