@@ -1,11 +1,11 @@
-from Database.FileDatabase import FileDatabase
+from Database.FileDatabase import UserFileDatabase
 from GRPC.user_pb2 import User, UserList
 from .user_pb2_grpc import UserServiceServicer
 
 
 class UserServicer(UserServiceServicer):
     def __init__(self) -> None:
-        self.database = FileDatabase()
+        self.database = UserFileDatabase()
         super().__init__()
 
     def CreateUser(self, request, context) -> User:

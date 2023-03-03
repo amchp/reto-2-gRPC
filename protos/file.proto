@@ -1,8 +1,27 @@
 syntax = "proto3";
 
+message NoMessage{}
+
+message Name {
+    string name = 1;
+}
+
+service FileService{
+    rpc CreateFile (File) returns (File);
+    rpc GetFile (Name) returns (File);
+    rpc GetFileList (NoMessage) returns (FileList);
+    rpc UpdateFile (File) returns (File);
+    rpc DeleteFile (Name) returns (File);
+}
+
+
+message FileList {
+    repeated File files = 1;
+}
+
 message File {
-    required string user_id = 1;
-    required string name = 2;
-    required string file_format = 3;
-    required bytes file = 4;
+    string user_id = 1;
+    string name = 2;
+    string file_format = 3;
+    bytes file = 4;
 }

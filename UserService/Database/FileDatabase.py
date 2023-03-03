@@ -1,8 +1,8 @@
 
 from GRPC.user_pb2 import User, UserList
-from Database.DatabaseInterface import Database
+from Database.DatabaseInterface import UserDatabase
 
-class FileDatabase(Database):
+class UserFileDatabase(UserDatabase):
     def __init__(self):
         self.readFile()
 

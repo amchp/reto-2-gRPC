@@ -1,4 +1,5 @@
 import userRouter from './routers/UserRouter.js';
+import fileRouter from './routers/FileRouter.js'; 
 import express from 'express';
 
 const app = express();
@@ -12,6 +13,7 @@ app.get('/', (req, res) => {
 
 app.use(express.json());
 app.use("/user", userRouter);
+app.use("/file", fileRouter);
 
 
 app.listen(port, hostname, () => {

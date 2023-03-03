@@ -4,24 +4,24 @@ from GRPC.user_pb2 import User
 
 
 
-class Database(ABC):
+class UserDatabase(ABC):
 
     @abstractmethod
-    def createUser(self, request) -> User:
+    def createUser(self, user) -> User:
         pass
 
     @abstractmethod
-    def getUser(self, request) -> User:
+    def getUser(self, id) -> User:
         pass
 
     @abstractmethod
-    def getUserList(self, request):
+    def getUserList(self):
         pass
 
     @abstractmethod
-    def updateUser(self, request) -> User:
+    def updateUser(self, user) -> User:
         pass
 
     @abstractmethod
-    def deleteUser(self, request) -> User:
+    def deleteUser(self, id) -> User:
         pass

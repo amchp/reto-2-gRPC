@@ -12,8 +12,8 @@ class UserController {
             password: req.body.password,
             email: req.body.email
         }
-        const responce = await this.userService.createUser(user);
-        res.send(responce);
+        const response = await this.userService.createUser(user);
+        res.send(response);
     }
 
     async getList(req, res) {
