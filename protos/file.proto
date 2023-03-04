@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-message NoMessage{}
+message NoFileMessage{}
 
 message Name {
     string name = 1;
@@ -9,7 +9,7 @@ message Name {
 service FileService{
     rpc CreateFile (File) returns (File);
     rpc GetFile (Name) returns (File);
-    rpc GetFileList (NoMessage) returns (FileList);
+    rpc GetFileList (NoFileMessage) returns (FileList);
     rpc UpdateFile (File) returns (File);
     rpc DeleteFile (Name) returns (File);
 }

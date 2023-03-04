@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+message UserId {
+    string user = 1;
+}
+
+message UserName {
+    string name = 1;
+}
+
+service SearcherService{
+    rpc getFileListByUserId(UserId) returns (searchFileList);
+    rpc getUsersByName(UserName) returns (searchUserList);
+}
+
+
+message searchFileList {
+    repeated searchFile files = 1;
+}
+
+message searchFile {
+    string user_id = 1;
+    string name = 2;
+    string file_format = 3;
+    bytes file = 4;
+}
+
+message searchUser {
+    int32 id = 1;
+    string name = 2;
+    int32 age = 3;
+    string password = 4;
+    optional string email = 5;
+}
+
+message searchUserList {
+    repeated searchUser users = 1;
+}
+

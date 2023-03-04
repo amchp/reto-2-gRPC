@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-message NoMessage{}
+message NoUserMessage{}
 
 message ID {
     int32 id = 1;
@@ -21,7 +21,7 @@ message UserList {
 service UserService{
     rpc CreateUser (User) returns (User);
     rpc GetUser (ID) returns (User);
-    rpc GetUserList (NoMessage) returns (UserList);
+    rpc GetUserList (NoUserMessage) returns (UserList);
     rpc UpdateUser (User) returns (User);
     rpc DeleteUser (ID) returns (User);
 }

@@ -21,7 +21,7 @@ class FileService {
         // The protoDescriptor object has the full package hierarchy
         const fileservice = protoDescriptor.FileService;
 
-        this.stub = new fileservice('localhost:50051', grpc.credentials.createInsecure());
+        this.stub = new fileservice('localhost:50052', grpc.credentials.createInsecure());
     }
 
     async createFile(file) {
