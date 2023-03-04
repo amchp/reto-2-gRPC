@@ -14,7 +14,9 @@
 
 
 `rmdir -r FileService`
+
 `rmdir -r SearcherServicer`
+
 `rmdir -r UserService`
 
 
@@ -26,8 +28,9 @@
 ## Installar dependecias
 
 
-`sudo apt install npm
-npm install`
+`sudo apt install npm`
+
+`npm install`
 
 ## Cambiar directorio Inicial
 
