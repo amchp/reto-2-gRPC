@@ -90,12 +90,13 @@ class FileDatabase(FileDatabaseInterface):
         binary_file = open(f'./Database/files/{name}', 'rb')
         file_extension = binary_file.name.split('.')[1]
         file = b''.join(binary_file.readlines())
-        del self.user_id[file.name]
+        user_id = self.user_id[name]
+        del self.user_id[name]
         self.write_user_ids()
         os.remove(f'./Database/files/{name}')
         
         return File(
-            user_id=self.user_id[name],
+            user_id=user_id,
             name=name,
             file_format=file_extension,
             file=file

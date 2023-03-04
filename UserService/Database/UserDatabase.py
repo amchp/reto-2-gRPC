@@ -31,12 +31,14 @@ class UserDatabase(UserDatabase):
     def createUser(self, user) -> User:
         
         user.id = self.id_count
-        self.database[user.id] =  user
+        id = str(user.id)
+        self.database[id] =  user
         self.writeFile()
         self.id_count += 1
-        return self.database[user.id]
+        return self.database[id]
 
     def getUser(self, id) -> User:
+        id = str(id)
         if not id in self.database:
             return User()
         return self.database[id]
@@ -45,7 +47,7 @@ class UserDatabase(UserDatabase):
         return UserList(users=self.database.values())
 
     def updateUser(self, user) -> User:
-        id = user.id
+        id = str(user.id)
         if not id in self.database:
             return User()
         self.database[id] = user
@@ -54,6 +56,7 @@ class UserDatabase(UserDatabase):
 
 
     def deleteUser(self, id) -> User:
+        id = str(id)
         if not id in self.database:
             return User()
         user = self.database[id]
