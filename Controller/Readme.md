@@ -19,7 +19,11 @@ cd Controller
 ## Installar nodejs:
 ```
 sudo apt update
-sudo apt install nodejs
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+nvm install 18
+nvm alias default 18
+nvm use 18
+nvm install node
 ```
 
 ## Installar dependecias
