@@ -27,7 +27,7 @@ pip install -r requirements.txt
 vim config.json
 ```
 
-Cambiar directorio de protros las IP y PORTS de los servicios.
+Cambiar directorio de protros las IP y PORT de los servicios.
 
 ## Correr applicación
 ```
