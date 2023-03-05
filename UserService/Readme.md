@@ -10,7 +10,7 @@ cd reto-2-gRPC
 
 ```
 rm -r FileService
-rm -r SearcherServicer
+rm -r SearchServicer
 rm -r Controller
 cd UserService
 ```
