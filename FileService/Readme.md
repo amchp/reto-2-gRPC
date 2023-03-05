@@ -9,7 +9,7 @@ cd reto-2-gRPC
 ## Quitar folders innecesarios
 
 ```
-rm -r SearcherServicer
+rm -r SearchServicer
 rm -r UserService
 rm -r Controller
 cd FileService

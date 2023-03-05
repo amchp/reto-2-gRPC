@@ -11,7 +11,7 @@ cd reto-2-gRPC
 
 ```
 rm -r FileService
-rm -r SearcherServicer
+rm -r SearchServicer
 rm -r UserService
 cd Controller
 ```
@@ -19,7 +19,12 @@ cd Controller
 ## Installar nodejs:
 ```
 sudo apt update
-sudo apt install nodejs
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+source ~/.bashrc 
+nvm install 18
+nvm alias default 18
+nvm use 18
+nvm install node
 ```
 
 ## Installar dependecias

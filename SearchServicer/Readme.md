@@ -12,7 +12,7 @@ cd reto-2-gRPC
 rm -r FileService
 rm -r UserService
 rm -r Controller
-cd SearcherServicer
+cd SearchServicer
 ```
 
 ## Installar dependencias
