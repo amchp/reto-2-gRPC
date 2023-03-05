@@ -1,4 +1,6 @@
-import config from '../config.json' assert { type: "json" };
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const config = require("../config.json");
 import grpc from '@grpc/grpc-js';
 import protoLoader from '@grpc/proto-loader';
 
