@@ -15,9 +15,9 @@ cd reto-2-gRPC
 ```
 rm -r FileService
 
-rmdir -r SearcherServicer
+rm -r SearcherServicer
 
-rmdir -r UserService
+rm -r UserService
 ```
 
 ## Installar nodejs:
