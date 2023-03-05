@@ -23,9 +23,9 @@ pip install -r requirements.txt
 ```
 
 ## Configurar IP y puerto
-`vim config.json`
+```vim config.json```
 
 Modifique la IP y el PORT al que van a usar.
 
 ## Correr applicación
-`python3 Server.py`
+```python3 Server.py```
