@@ -4,7 +4,6 @@
 
 ```
 git clone https://github.com/amchp/reto-2-gRPC.git
-
 cd reto-2-gRPC
 ```
 
@@ -12,10 +11,9 @@ cd reto-2-gRPC
 
 ```
 rm -r FileService
-
 rm -r SearcherServicer
-
 rm -r UserService
+cd Controller
 ```
 
 ## Installar nodejs:
@@ -28,18 +26,19 @@ sudo apt install nodejs
 
 ```
 sudo apt install npm
-
 npm install
 ```
 
-## Cambiar directorio Inicial
-
-## Cambiar IPS
-
+## Cambiar configuraciones
+```
+vim config.json
+```
+Cambiar directorio de protros las IPS y PORTS del controllador y de los servicios.
 
 ## Correr applicación
-
-`sudo node index.js`
+```
+sudo node index.js
+```
 
 
 
