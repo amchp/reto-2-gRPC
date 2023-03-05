@@ -1,10 +1,11 @@
+import config from './config.json' assert { type: "json" };
 import userRouter from './routers/UserRouter.js';
 import fileRouter from './routers/FileRouter.js'; 
 import express from 'express';
 
 const app = express();
-const hostname = '127.0.0.1';
-const port = 3000;
+const hostname = config.IP;
+const port = config.PORT;
 
 
 app.get('/', (req, res) => {

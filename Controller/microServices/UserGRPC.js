@@ -1,7 +1,8 @@
+import config from '../config.json' assert { type: "json" };
 import grpc from '@grpc/grpc-js';
 import protoLoader from '@grpc/proto-loader';
 
-const PROTOS_PATH = '/Users/alejandromcewen/Documents/Estudios/Semestre6/TopicosEspecialesEnTelematica/reto2/protos/';
+const PROTOS_PATH = config.PROTOSDIRECTORY;
 const USER_PROTOS_PATH = `${PROTOS_PATH}user.proto`
 import { promisify } from "util";
 
