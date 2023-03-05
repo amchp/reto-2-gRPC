@@ -2,13 +2,13 @@
 
 ## Descargar repositorio:
 
+```
+sudo apt install git
 
-`sudo apt install git`
+git clone https://github.com/amchp/reto-2-gRPC.git
 
-`git clone https://github.com/amchp/reto-2-gRPC.git`
-
-`cd reto-2-gRPC`
-
+cd reto-2-gRPC
+```
 
 ## Quitar folders innecesarios
 
