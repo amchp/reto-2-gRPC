@@ -2,19 +2,22 @@
 
 ## Descargar repositorio:
 
-<code>
-sudo apt install git <br/>
-git clone https://github.com/amchp/reto-2-gRPC.git <br/>
-cd reto-2-gRPC
-</code>
+
+`sudo apt install git`
+
+`git clone https://github.com/amchp/reto-2-gRPC.git`
+
+`cd reto-2-gRPC`
+
 
 ## Quitar folders innecesarios
 
-<code>
-rmdir -r FileService
-rmdir -r SearcherServicer
-rmdir -r UserService
-</code>
+
+`rmdir -r FileService`
+
+`rmdir -r SearcherServicer`
+
+`rmdir -r UserService`
 
 
 
@@ -24,10 +27,10 @@ rmdir -r UserService
 
 ## Installar dependecias
 
-<code>
-sudo apt install npm
-npm install
-</code>
+
+`sudo apt install npm`
+
+`npm install`
 
 ## Cambiar directorio Inicial
 
