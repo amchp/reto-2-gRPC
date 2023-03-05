@@ -1,4 +1,4 @@
-import UserController from '../Controllers/UserController';
+import UserController from '../Controllers/UserController.js';
 import express from 'express';
 
 let userRouter = express.Router();
