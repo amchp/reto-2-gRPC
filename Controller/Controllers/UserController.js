@@ -1,4 +1,4 @@
-import UserService from "../microServices/userGRPC.js";
+import UserService  from "../microServices/UserGRPC.js";
 import SearcherService from "../microServices/SearchGRPC.js";
 
 class UserController {
