@@ -12,8 +12,8 @@ def serve():
     add_SearcherServiceServicer_to_server(
         SearcherServicer(), server)
     
-    server.add_insecure_port(f'{config["IP"]}:{config["PORT"]}')
-    print("Starting Server", config["IP"], config["PORT"])
+    server.add_insecure_port(f'{config["SEARCH_SERVICE_IP"]}:{config["SEARCH_SERVICE_PORT"]}')
+    print("Starting Server", config["SEARCH_SERVICE_IP"], config["SEARCH_SERVICE_PORT"])
     server.start()
     server.wait_for_termination()
 

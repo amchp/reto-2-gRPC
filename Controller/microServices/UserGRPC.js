@@ -22,7 +22,7 @@ class UserService {
         // The protoDescriptor object has the full package hierarchy
         const userservice = protoDescriptor.UserService;
 
-        this.stub = new userservice('localhost:50051', grpc.credentials.createInsecure());
+        this.stub = new userservice(`${config.IP_USER_SERVICE}:${config.PORT_USER_SERVICE}`, grpc.credentials.createInsecure());
     }
 
     async createUser(user) {

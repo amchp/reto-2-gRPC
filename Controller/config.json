@@ -1,5 +1,11 @@
 {
     "PROTOSDIRECTORY": "/Users/alejandromcewen/Documents/Estudios/Semestre6/TopicosEspecialesEnTelematica/reto2/protos/",
-    "IP": "127.0.0.1",
-    "PORT": "3000"
+    "CONTROLLER_IP": "127.0.0.1",
+    "CONTROLLER_PORT": "3000",
+    "IP_USER_SERVICE": "127.0.0.1",
+    "PORT_USER_SERVICE": "50051",
+    "IP_FILE_SERVICE": "127.0.0.1",
+    "PORT_FILE_SERVICE": "50052",
+    "IP_SEARCH_SERVICE": "127.0.0.1",
+    "PORT_SEARCH_SERVICE": "50053"
 }

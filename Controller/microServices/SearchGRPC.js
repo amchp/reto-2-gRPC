@@ -22,7 +22,7 @@ class SearcherService {
         // The protoDescriptor object has the full package hierarchy
         const fileservice = protoDescriptor.SearcherService;
 
-        this.stub = new fileservice('localhost:50053', grpc.credentials.createInsecure());
+        this.stub = new fileservice(`${config.IP_SEARCH_SERVICE}:${config.PORT_SEARCH_SERVICE}`, grpc.credentials.createInsecure());
     }
 
     async getFileListByUserId(user_id) {

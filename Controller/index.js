@@ -4,8 +4,8 @@ import fileRouter from './routers/FileRouter.js';
 import express from 'express';
 
 const app = express();
-const hostname = config.IP;
-const port = config.PORT;
+const hostname = config.CONTROLLER_IP;
+const port = config.CONTROLLER_PORT;
 
 
 app.get('/', (req, res) => {
