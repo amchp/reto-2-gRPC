@@ -7,4 +7,6 @@ Esta es una aplicación de archivos. La aplicación va a ser con una arquitectur
 
 Este repositorio tiene los cuatro servicios con Readmes de como montarlos.
 
-Deje Postman con los que hice los test en PostMan aunque deben actualizar la IP de aceso.
+Deje un archivo con todos los request de test que hice en PostMan aunque deben actualizar la IP de aceso.
+
+En el img hay fotos de todos los request que se le pueden hacer al servicio.
