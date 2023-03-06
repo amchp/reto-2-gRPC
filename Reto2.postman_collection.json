@@ -28,7 +28,91 @@
 			"response": []
 		},
 		{
-			"name": "Get File",
+			"name": "Get user by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "44.213.166.17/user/",
+					"host": [
+						"44",
+						"213",
+						"166",
+						"17"
+					],
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "44.213.166.17/user/",
+					"host": [
+						"44",
+						"213",
+						"166",
+						"17"
+					],
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Files",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "52.201.221.18/file/",
+					"host": [
+						"52",
+						"201",
+						"221",
+						"18"
+					],
+					"path": [
+						"file",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get File by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "52.201.221.18/file/",
+					"host": [
+						"52",
+						"201",
+						"221",
+						"18"
+					],
+					"path": [
+						"file",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get File by user_id",
 			"request": {
 				"method": "GET",
 				"header": [],
